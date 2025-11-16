@@ -1,0 +1,68 @@
+# ### Get all products
+# GET http://localhost:5000/api/products
+# Content-Type: application/json
+
+# ###
+
+# ### Add a new product
+# POST http://localhost:5000/api/products
+# Content-Type: application/json
+
+# {
+#   "name": "Tablet",
+#   "price": 15000,
+#   "image":"/uploads/image.jpg"
+# }
+
+# ###
+
+# ### Another product
+# POST http://localhost:5000/api/products
+# Content-Type: application/json
+
+# {
+#   "name": "Smart Watch",
+#   "price": 7000,
+#   "image":"/uploads/Photo.jpg"
+# }
+
+# ###
+# POST http://localhost:5000/api/products
+# Content-Type: application/json
+
+# {
+#   "name": "Laptop",
+#   "price": 70000,
+#   "image":"/uploads/TBATE.jpg"
+# }
+
+# ###
+# POST http://localhost:5000/api/products
+# Content-Type: application/json
+
+# {
+#   "name": "TBATE",
+#   "price": 35000,
+#   "image": "http://api/products/TBATE.jpg"
+# }
+
+### -----------------------------------------
+### PRODUCTS API
+### -----------------------------------------
+
+### Get all products
+### Get all products
+GET http://localhost:3000/products
+Content-Type: application/json
+
+###
+
+### Seed sample products (optional)
+POST http://localhost:3000/products/add
+Content-Type: application/json
+
+{
+  "title": "TBATE",
+  "price": 120,
+  "image": "TBATE.jpg"
+}
