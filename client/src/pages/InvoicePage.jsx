@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000";
-
 export default function InvoicePage() {
   const [orders, setOrders] = useState([]);
 
   const fetchOrders = async () => {
     try {
-      const res = await axios.get(`${API_URL}/cart/orders`);
+      const res = await axios.get(`http://localhost:3000/cart/orders`);
       if (res.data.success) {
         setOrders(res.data.orders);
       }

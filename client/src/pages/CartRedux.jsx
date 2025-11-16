@@ -11,8 +11,6 @@ import axios from "axios";
 import Cart from "../components/Cart";
 import ProductList from "../components/ProductList";
 
-const API_URL = "http://localhost:3000";
-
 const CartRedux = () => {
   const dispatch = useDispatch();
   const products = useSelector(state => state.cart.products);
@@ -21,7 +19,7 @@ const CartRedux = () => {
   // Load products (same as useState)
   useEffect(() => {
     axios
-      .get(`${API_URL}/products`)
+      .get(`http://localhost:3000/products`)
       .then(res => dispatch(setProducts(res.data.products)))
       .catch(err => console.error(err));
   }, []);
@@ -34,7 +32,7 @@ const CartRedux = () => {
     }
 
     try {
-      const res = await axios.post(`${API_URL}/cart/checkout`, {
+      const res = await axios.post(`http://localhost:3000/cart/checkout`, {
         cartItems: cart
       });
 

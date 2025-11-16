@@ -3,8 +3,6 @@ import axios from "axios";
 import Cart from "../components/Cart";
 import ProductList from "../components/ProductList";
 
-const API_URL = "http://localhost:3000";
-
 const CartUseState = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
@@ -12,7 +10,7 @@ const CartUseState = () => {
   // Load products
   useEffect(() => {
     axios
-      .get(`${API_URL}/products`)
+      .get(`http://localhost:3000/products`)
       .then((res) => setProducts(res.data.products))
       .catch((err) => console.error(err));
   }, []);
@@ -58,7 +56,7 @@ const CartUseState = () => {
     }
 
     try {
-      const res = await axios.post(`${API_URL}/cart/checkout`, {
+      const res = await axios.post(`http://localhost:3000/cart/checkout`, {
         cartItems: cart,
       });
 

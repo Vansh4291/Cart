@@ -3,13 +3,6 @@ const CartOrder = require("../model/CartOrder");
 
 const router = express.Router();
 
-/*
-----------------------------------------
- NO CART MODEL, NO SERVER CART STORAGE
- Frontend manages cart locally
-----------------------------------------
-*/
-
 // Get all past orders
 router.get("/orders", async (req, res) => {
   try {
